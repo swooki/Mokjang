@@ -40,7 +40,7 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://pixabay.com/get/52e2dd464c52a914f6da8c7dda793f7f1636dfe2564c704c7d2d78d59649c25f_340.jpg);
+  background-image: url(/imgs/pattern1.png);
 }
 .slideshow li:nth-child(2) { 
   background-image: url(https://pixabay.com/get/57e2d540485aa514f6da8c7dda793f7f1636dfe2564c704c7d2d79d69445c150_340.jpg);

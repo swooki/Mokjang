@@ -61,5 +61,5 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 app.listen(process.env.PORT, function() {
-	console.log("YelpCamp Server Has Started!")
+	console.log("Mokjang Server Has Started!")
 });
