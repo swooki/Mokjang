@@ -9,30 +9,30 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm navbar-light bg-light">
-			<div class="container">
-				<a class="navbar-brand" href="/">
-					<i class="fa fa-home mr-1" aria-hidden="true"></i>아프간목장</a>
-				<ul class="navbar-nav ">
-					<li><a class="nav-link" href="/campgrounds"><i class="fas fa-users"></i>식구들</a></li>
-				</ul>
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand" href="/">
+				<i class="fa fa-home mr-1" aria-hidden="true"></i>아프간목장</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+					aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-				</button>
-			</div>
+			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav navbar-right">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/campgrounds">식구들</a></li>
+				</ul>
+				<ul class="navbar-nav my-2 my-lg-0">
 					<% if(!currentUser) {%>
-					<li><a class="nav-link" href="/login">Login</a> </li>
-					<li><a class="nav-link" href="/register"><i class="fas fa-user-plus"></i></a></li>
+					<li><a class="nav-link" href="/login">로그인</a> </li>
+					<li><a class="nav-link" href="/register">사인업</a></li>
 					<% } else { %>
 					<li><a class="nav-link" href="#"><%=currentUser.username%></a></li>
-					<li><a class="nav-link" href="/logout">Logout</a></li>
+					<li><a class="nav-link" href="/logout">로그아웃</a></li>
 					<% } %>
 				</ul>
 			</div>
 		</nav>
-		 <!-- Flash message -->
+		
+		<!-- Flash message -->
 		<div class="container">
 			<% if (error && error.length > 0){ %>
 			<div class="alert alert-danger" role="alert"><%= error %></div>
