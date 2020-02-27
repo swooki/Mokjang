@@ -50,14 +50,16 @@ app.use(function(req, res, next){
    	next();	
 });
 
-
-
-
 // use external routes 
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
+// Test
+// show register form
+app.get("/test", function(req, res){
+   res.render("test"); 
+});
 
 
 app.listen(process.env.PORT, function() {
